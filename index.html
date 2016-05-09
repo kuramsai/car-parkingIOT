@@ -23,6 +23,24 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+    	function show(nr) {
+        document.getElementById("table1").style.display="none";
+      document.getElementById("table2").style.display="none";
+      /*  document.getElementById("table3").style.display="none";
+    		document.getElementById("table4").style.display="none";
+    		document.getElementById("table5").style.display="none";*/
+        document.getElementById("table"+nr).style.display="block";
+    }
+    	</script>
+      <style>
+td {
+    vertical-align: top;
+}
+#table1, #table2, #table3, #table4 {
+    display: none;
+}</style>
+
 
 </head>
 
@@ -54,8 +72,10 @@
                         <a class="page-scroll" href="#slide1">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#slide2">Services</a>
-                    </li>
+                        <a class="page-scroll" href="#slide2">Detils</a>
+                    </li>  <li>
+                          <a class="page-scroll" href="#slide3">DataBase</a>
+                      </li>
 
                 </ul>
             </div>
@@ -116,6 +136,16 @@
 
             </div>
           </div>
+          </div>
+                  <div class="panel panel-primary details" >
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Search DataBase</h3>
+                    </div>
+                    <div class="panel-body">
+                      Check our Database for previously submitted details?
+                      <a class="btn btn-success page-scroll" href="#slide3">Go to DB Center</a>
+
+                    </div>
                   </div>
                 </div>
             </div>
@@ -208,6 +238,126 @@
     </section>
 
     <!-- Contact Section -->
+    <section id="slide3" class="slide">
+        <div class="container">
+            <div class="row">
+              <input type="button" class="btn btn-primary bttn" value="List of people who Want to help" onclick="show(1);">
+              <input type="button" class="btn btn-primary bttn" value="List of people who Wannted help" onclick="show(2);">
+
+              <div id="table1">
+                <h2 style="color:white">Details of People who want to help</h2>
+                <table  class="table table-hover" >
+                <tr>
+                  <th>s.no</th>
+                  <th>Name</th>
+                  <th>Type of help</th>
+                  <th>Take help</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Sai Kiran</td>
+                  <td>Cleaning the area</td>
+                  <td><input type="button" class="btn btn-primary" value="Message volunteer"></td>
+
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>raj Kiran</td>
+                  <td>planting trees</td>
+                  <td><input type="button" class="btn btn-primary" value="Message volunteer"></td>
+
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>adam</td>
+                  <td>painting the walls</td>
+                  <td><input type="button" class="btn btn-primary" value="Message volunteer"></td>
+
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td>joel</td>
+                  <td>cleaning the area</td>
+                  <td><input type="button" class="btn btn-primary" value="Message volunteer"></td>
+
+                </tr>
+
+              </table>
+            </div>
+            <div id="table2">
+              <h2  style="color:white">Details of people who are looking for help</h2>
+              <table  class="table table-hover" >
+              <tr>
+                <th>s.no</th>
+                <th>Name</th>
+                <th>Type of help required</th>
+                <th>Location</th>
+                <th>Images</th>
+                <th>Message the help taker</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Raja ram</td>
+                <td>Cleaning the area</td>
+                <td>Kukatpally</td>
+                <td><a>3 images</a></td>
+                <td><a class="btn btn-default" href="#" role="button">Message the help taker</a></td>
+
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Mohan rao</td>
+                <td>planting trees</td>
+                <td>Patancheru</td>
+                <td><a>5 images</a></td>
+                <td><a class="btn btn-default" href="#" role="button">Message the help taker</a></td>
+
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>adam</td>
+                <td>painting the walls</td>
+                <td>Balanagar</td>
+                <td><a>2 images</a></td>
+                <td><a class="btn btn-default" href="#" role="button">Message the help taker</a></td>
+
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>joel</td>
+                <td>cleaning the area</td>
+                <td>Hi tech City</td>
+                <td><a>9 images</a></td>
+                <td><a href="#modal-one" class="btn btn-big">Modal!</a></td>
+                <a href="#" class="modal" id="modal-one" aria-hidden="true">
+  </a>
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h2>Modal in CSS?</h2>
+      <a href="#" class="btn-close" aria-hidden="true">×</a>
+    </div>
+    <div class="modal-body">
+      <p>One modal example here! :D</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn">Nice!</a>
+    </div>
+  </div>
+
+
+              </tr>
+
+            </table>
+          </div>
+
+              </div>
+            </div>
+          </section>
+
 
 
     <!-- jQuery -->

@@ -1,3 +1,113 @@
+//
+// Modal
+// ----------------------
+
+.modal{
+
+  // This is modal bg
+  &:before{
+    content: "";
+    /*display: none;*/
+    background: rgba(0,0,0,0);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+
+  }
+
+  &:target{
+
+    // Active animate in modal
+    &:before{
+      @include transition-transform("0.9s ease-out");
+    z-index:10;
+    background: rgba(0,0,0,.6);
+      /*display: block;*/
+    }
+  }
+
+}
+.modal:target + .modal-dialog{
+      @include translate(0, 0);
+      top: 20%;
+    }
+
+// Modal Dialog
+// ----------------------
+
+.modal-dialog{
+  background: #fefefe;
+  border: $gray solid 1px;
+  border-radius: 5px;
+  margin-left: -200px;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  z-index: 11;
+  width: 360px;
+  @include translate(0, -500%);
+  @include transition-transform("0.3s ease-out");
+}
+
+.modal-body{
+  padding: $space/2;
+}
+
+.modal-header,
+.modal-footer{
+  padding: $space/4 $space/2;
+}
+
+.modal-header{
+  border-bottom: $gray-lighter solid 1px;
+
+  h2{
+    font-size: 20px;
+  }
+
+}
+
+.modal-footer{
+  border-top: $gray-lighter solid 1px;
+  text-align: right;
+}
+//
+// Variables
+// ----------------------
+
+$gray: #333;
+$gray-light: #aaa;
+$gray-lighter: #eee;
+$space: 40px;
+$blue: #428bca;
+$blue-dark: darken($blue, 5%);
+
+// Mixin for transition/transform
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x, $y); // IE9+
+          transform: translate($x, $y);
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+          transition: $transition;
+}
+@mixin transition-transform($transition) {
+  -webkit-transition: -webkit-transform unquote($transition);
+     -moz-transition: -moz-transform unquote($transition);
+       -o-transition: -o-transform unquote($transition);
+          transition: transform unquote($transition);
+}
+
+.bttn{
+  margin-right: 5px;
+  margin-bottom: 5px;
+  }.details{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 .home{
   font-size: 1.2em;
   line-height: 1.5em;
@@ -100,7 +210,6 @@ img:last-of-type {
 
 #slide1:before {
   background-image: url("../img/2.jpg");
-  transform: translateZ(-1px) scale(2);
   z-index:-1;
 }
 
@@ -110,8 +219,15 @@ img:last-of-type {
 }
 
 #slide3:before {
-  background-image: url("http://lorempixel.com/640/480/abstract/5/");
-  transform: translateZ(-1px) scale(2);
+  background: url(../img/3.jpg) no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;/*
+  background-image: url("../img/3.jpg");
+  background-size: 50% 50% cover;
+  background-repeat: no-repeat;
+  background-position: center;*/
   z-index:-1;
 }
 
