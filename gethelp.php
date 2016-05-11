@@ -1,17 +1,17 @@
 <html>
 <body>
 <?php
-$servername = "localhost";
-$username = "root";
+$servername = "mysql11.000webhost.com";
+$username = "a5220582_cuma";
 $password = "sk123sk123";
-$dbname = "mysql";
+$dbname = a5220582_cuma;
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 $first_name = mysqli_real_escape_string($conn, $_POST['fname']);
 $last_name = mysqli_real_escape_string($conn, $_POST['lname']);
 $email_address = mysqli_real_escape_string($conn, $_POST['email']);
@@ -42,7 +42,7 @@ if ($conn->query($sql) === TRUE) {
 echo "<center><h2>Data Submitted </br> You Will be redirected un 5 seconds</h2></center>" ;
 
 header( "refresh:5;url=index.html" );
- 
+
 //mysql_close($conn);
 ?>
 </body>

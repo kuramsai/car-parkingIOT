@@ -238,10 +238,10 @@ td {
               <div id="table1">
                 <h2 style="color:white">Details of People who want to help</h2>
             <?php
-                $servername = "localhost";
-                $username = "root";
+                $servername = "mysql11.000webhost.com";
+                $username = "a5220582_cuma";
                 $password = "sk123sk123";
-                $dbname = "mysql";
+                $dbname = a5220582_cuma;
                 $sno=0;
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -276,10 +276,10 @@ td {
             <div id="table2">
               <h2  style="color:white">Details of people who are looking for help</h2>
               <?php
-                  $servername = "localhost";
-                  $username = "root";
+                  $servername = "mysql11.000webhost.com";
+                  $username = "a5220582_cuma";
                   $password = "sk123sk123";
-                  $dbname = "mysql";
+                  $dbname = a5220582_cuma;
                   $sno=0;
                   // Create connection
                   $conn = new mysqli($servername, $username, $password, $dbname);
