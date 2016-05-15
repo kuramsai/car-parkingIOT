@@ -3,18 +3,18 @@
 import serial 
 import MySQLdb
 
-while(1):
-  #establish connection to MySQL. You'll have to change this for your database.
-  dbConn = MySQLdb.connect("localhost","root","sk123sk123","test") or die ("could not connect to database")
-  #open a cursor to the database
-  cursor = dbConn.cursor()
+#establish connection to MySQL. You'll have to change this for your database.
+dbConn = MySQLdb.connect("localhost","root","sk123sk123","test") or die ("could not connect to database")
+#open a cursor to the database
+cursor = dbConn.cursor()
 
-  device = 'COM10' #this will have to be changed to the serial port you are using
-  try:
-    print "Trying...",device 
-    arduino = serial.Serial(device, 9600) 
-  except: 
-    print "Failed to connect on",device    
+device = 'COM10' #this will have to be changed to the serial port you are using
+try:
+  print "Trying...",device 
+  arduino = serial.Serial(device, 9600) 
+except: 
+  print "Failed to connect on",device    
+while(1):
   try: 
     data = arduino.readline()  #read the data from the arduino
     set1 = (data[0])
@@ -25,12 +25,9 @@ while(1):
       cursor.execute("update test.lotdata set status=%s where id='1'",(set1))
       print ("Inserted",data[0])
       dbConn.commit() #commit the insert
-      cursor.close()  #close the cursor
     except MySQLdb.IntegrityError:
       print "failed to insert data"
-    finally:
-      cursor.close()  #close just incase it failed
   except Exception as e:
     print "Failed to get data from Arduino!\n",e
 
-  arduino.close()
+arduino.close()
