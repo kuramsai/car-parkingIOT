@@ -32,10 +32,10 @@
             echo $val;
             if($val==1)
             {
-              echo "<div class='box1'></div>";
+              echo "<div class='box1'><h1>P1-Free</h1></div>";
             }
             else {
-              echo "<div class='box0'></div>";
+              echo "<div class='box0'><h1>P1-Full</h1></div>";
             }
         }
     } else {
