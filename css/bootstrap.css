@@ -5457,7 +5457,6 @@ button.list-group-item-danger.active:focus {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-  max-width: 50%;
 }
 .panel-body {
   padding: 15px;
