@@ -1,3 +1,18 @@
+.phone-block{
+margin-right: auto;
+margin-left: auto;
+border-style: groove;
+padding: 5px;
+margin-top: 5%;
+width: 50%
+}
+.counter{
+  width: 150px;
+height: 80px;
+border-style: groove;
+position: absolute;
+right: 0;
+}
 .box0{
   background-color: Red;
     width: 300px;

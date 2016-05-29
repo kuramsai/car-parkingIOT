@@ -1,0 +1,100 @@
+.phone-block{
+margin-right: auto;
+margin-left: auto;
+border-style: groove;
+padding: 5px;
+margin-top: 5%;
+width: 50%
+}
+.up{
+  margin-top: -280px;
+}
+.counter{
+  width: 150px;
+height: auto;
+border-style: groove;
+position: absolute;
+right: 0;
+top: 0;
+}
+.center{
+	text-align: center;
+}
+
+p{
+	font-family: ‘Lucida Console’, Monaco, monospace;
+font-weight: bolder;
+	font-size:2.5em;
+
+	}
+@media only screen and (max-device-width: 480px) {
+	p{
+	font-family: ‘Lucida Console’, Monaco, monospace;
+font-weight: bolder;
+	font-size:3.5em;
+
+	}
+
+	}
+.verticalLine {
+    height: 500px;
+
+}
+
+.left{
+	width:30%;
+	height:100%;
+	margin:5px;
+	display:block;
+}
+.mid{
+    min-width: 78%;
+    height: 30%;
+	margin-left:22%;
+	display:flex;
+}
+.right{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 30%;
+    right: 0%;
+
+}
+.box0{
+  background-color: Red;
+    width: 90%;
+    height: 20%;
+    padding: 25px;
+    border: 5px solid navy;
+    margin-left: 20px;
+	margin-top:5px;
+}
+.box1{
+  background-color: Green;
+     width: 90%;
+    height: 20%;
+    padding: 25px;
+    border: 5px solid navy;
+    margin-left: 20px;
+	margin-top:5px;
+
+}
+.vbox0{
+  background-color: Red;
+    width: 24%;
+    height: 80%;
+    padding: 25px;
+    border: 5px solid navy;
+    margin-left: 20px;
+
+}
+.vbox1{
+  background-color: Green;
+     width: 24%;
+    height: 80%;
+    padding: 25px;
+    border: 5px solid navy;
+    margin-left: 20px;
+
+}

@@ -10,15 +10,14 @@
 </head>
 <body>
   <div id="show"></div>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			setInterval(function () {
-				$('#show').load('loaddata.php')
-			}, 1000);
+  	<script type="text/javascript" src="js/jquery.js"></script>
+  	<script type="text/javascript">
+  		$(document).ready(function() {
+  			setInterval(function () {
+  				$('#show').load('loaddata.php')
+  			}, 1000);
 
-  	});
-	</script>
-
+    	});
+  	</script>
 </body>
 </html>
